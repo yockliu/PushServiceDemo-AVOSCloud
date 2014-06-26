@@ -4,7 +4,7 @@ AV.Cloud.define("hello", function(request, response) {
 	response.success("Hello world!");
 });
 
-var Push = require('./BaiduPush');
+var Push = require('./cloud/BaiduPush');
 var opt = {
 	ak : "hFSfD5dCAbDHnIbANtcuSkt1",
 	sk : "6Veralrj7apiRBthfo1NW5NjUdNAapM6",
@@ -27,15 +27,15 @@ function baiduPushMessage() {
 
 AV.Cloud.define("pushAVOS", function(request, response) {
 	AV.Push.send({
-		data: {
-			alert: "AVOS Alert"
+		data      : {
+			alert : "AVOS Alert"
 		}
 	});
 
 	AV.Push.send({
-		data: {
-			alert: "AVOS content-available",
-			content-available: 1
+		data                    : {
+			alert               : "AVOS content-available",
+			"content-available" : 1,
 		}
 	});
 

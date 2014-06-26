@@ -4,7 +4,7 @@ AV.Cloud.define("hello", function(request, response) {
 	response.success("Hello world!");
 });
 
-var Push = require('cloud/BaiduPush.js');
+var Push = require('cloud/bpush.js');
 var opt = {
 	ak : "hFSfD5dCAbDHnIbANtcuSkt1",
 	sk : "6Veralrj7apiRBthfo1NW5NjUdNAapM6",
